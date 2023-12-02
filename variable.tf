@@ -21,30 +21,30 @@
 # meaning that users must provide a value when running Terraform commands or using a .tfvars file
 
 variable "vpc_name" {
-    type = string
+    type        = string
     description = "Name for the VPC"
-    default = "my-vpc"
+    default     = "my-vpc"
 }
 
 variable "vpc_cidr_block" {
-    type = string
+    type        = string
     description = "IPv4 CIDR block for the VPC"
-    default = "10.0.0.0/16"
+    default     = "10.0.0.0/16"
 }
 
 variable "vpc_tenancy" {
-    type = string
+    type        = string
     description = "Tenancy type for VPC"
-    default = "default"
+    default     = "default"
 }
 
 variable "vpc_tags" {
-    type = string
+    type        = map(string)
     description = "Tags for the VPC"
 }
 
 variable "vpc_id" {
-    type = string
+    type        = string
     description = "vpc id for subnet creation"
   
 }
@@ -88,12 +88,6 @@ variable "route_table_name" {
     type = string
     description = "Name of the route table"
  
-}
-
-variable "select_vpc_for_route_table" {
-    type = string
-    description = "valueThe VPC to use for this route table"
-  
 }
 
 # Create internet gateway
