@@ -56,17 +56,10 @@ variable "vpc_id" {
 # meaning that users must provide a value when running Terraform commands or using a .tfvars file
 
 variable "subnet_name" {
-    type = string
+    type        = string
     description = "Name of the subnet"
   
 }
-
-variable "availability_zone" {
-    type = list(string)
-    description = "Availability zone where the subnet will be created"
-  
-}
-
 variable "IPv4_subnet_CIDR_block" {
     type = string
     description = "CIDR block for the subnet"
